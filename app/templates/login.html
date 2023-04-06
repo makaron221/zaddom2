@@ -1,0 +1,35 @@
+{%extends "base.html"%}
+    {% block content %}
+    <h2>Log in here</h2>
+    <form action="" class="row g-3" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <div class="col-auto">
+            <!-- <label for="staticEmail2" class="visually-hidden">Email</label>
+            <input type="text" readonly class="form-control-plaintext"
+            id="staticEmail2" value="mail@example.com"> -->
+            {{ form.username.label }}
+            {{ form.username() }}
+            <!-- {{ form.username(size = 22) }} -->
+        </div>
+        <div class="col-auto">
+            <!-- <label for="inputPassword2" class="visually-hidden">Password</label>
+            <input type="password"  class="form-control"
+            id="inputPassword2" placeholder="Password"> -->
+            {{ form.password.label }}
+            {{ form.password() }}
+            <!-- {{ form.password(size = 22) }} -->
+        </div>
+        <div class="col-auto">
+            
+            {{ form.rememberme.label }}
+            {{ form.rememberme() }}
+            
+        </div>
+        <div class="col-auto">
+            <!-- <button type="submit" class="btn btn-primary mb-3">Confirm 
+            identity</button> -->
+            {{ form.submit() }}
+        </div>
+
+    </form>
+    {% endblock %}

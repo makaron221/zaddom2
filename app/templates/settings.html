@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+{%block content%}
+    <h4><a href="{{url_for('chat')}}">chat</a></h4>
+    
+    <form action="" method="post" >
+        <img src="{{ pic }}" height="90px" width="90px">
+        <input id="picture" name="picture" type="text" placeholder="picture">
+        <h3>{{username}}</h3>
+        <input id="username" name="username" type="text" placeholder="username">
+        <input type="submit" placeholder="submit">
+    </form>
+{%endblock%}
